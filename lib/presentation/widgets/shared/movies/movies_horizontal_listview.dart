@@ -83,6 +83,7 @@ class _Slide extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
+            height: 220,
             width: 150,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
