@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cinema_app/config/helpers/human_formats.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../domain/entities/movie.dart';
 
@@ -98,7 +99,9 @@ class _Slide extends StatelessWidget {
                       child: Center(child: CircularProgressIndicator()),
                     );
                   }
-                  return FadeInRight(child: child);
+                  return GestureDetector(
+                      onTap: () => context.push('/movie/${movie.id}'),
+                      child: FadeInRight(child: child));
                 },
               ),
             ),
